@@ -67,44 +67,14 @@ int octal(int n) {
 }
 
 /*-------------------------------------------------*/
-char* hexadecimal(int n) {
-    char hexa[20] = "";       // creating and array of characters
-    int index = 0;           // setting index for hexa
-    int rem = n % 16;         // finding remainder
 
-    hexa[index] = '0' + rem;  // adding the remainder to hexa
-    n /= 16;                  // dividing n by 16 to update value
-    index++;                 // incrementing index
-    while (n > 0) {
-        // looping top procedure while checking if n = 0
-        rem = n % 16;
-        hexa[index] = '0' + rem;
-        n /= 16;
-        index++;
-    }
-    int indexLen = strlen(hexa) - 1;   //finding full length of array
-
-    reverseArray(hexa, indexLen);
-
-    int i = 0;
-    while(i < indexLen) {
-      switch (hexa[i]) {
-    	case 10:
-      		hexa[i] = 'A';
-     	case 11:
-       		hexa[i] = 'B';
-      	case 12:
-        	hexa[i] = 'C';
-       	case 13:
-        	hexa[i] = 'D';
-       	case 14:
-        	hexa[i] = 'E';
-        case 15:
-         	hexa[i] = 'F';
-        default:
-          hexa[i] = i;
-      }
-    }
-
-    return hexa;
+float celcius(int f) {
+    return (n - 32) * 5 / 9;
 }
+
+float fahrenheit(int c) {
+    return (n * 9 / 5) + 32;
+}
+
+/*-------------------------------------------------*/
+

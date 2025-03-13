@@ -7,6 +7,7 @@
 
 int binary(int n);
 int octal(int n);
-char* hexadecimal(int n);
+float celcius(int f);
+float fahrenheit(int c);
 
 #endif //MYCODE_H
